@@ -14,6 +14,7 @@ for turtle_index in range(0, 6):
     new_turtle.penup()
     new_turtle.color(colors[turtle_index])
     new_turtle.goto(x=-230, y= position[turtle_index])
+    all_turtles.append(new_turtle)
 
 while user_choice:
     is_race_on = True
