@@ -13,10 +13,10 @@ for turtle_index in range(0, 6):
     new_turtle = Turtle(shape="turtle")
     new_turtle.penup()
     new_turtle.color(colors[turtle_index])
-    new_turtle.goto(x=-230, y= position[turtle_index])
+    new_turtle.goto(x=-230, y=position[turtle_index])
     all_turtles.append(new_turtle)
 
-while user_choice:
+if user_choice:
     is_race_on = True
 
 while is_race_on:
@@ -24,11 +24,11 @@ while is_race_on:
     for turtle in all_turtles:
         if turtle.xcor() > 238:
             is_race_on = False
-            wining_color = turtle.pencolor()
-            if wining_color == user_choice:
-                print(f"Você venceu! {wining_color} é o vencedor!")
+            winning_color = turtle.pencolor()
+            if winning_color == user_choice:
+                print(f"Você venceu! {winning_color} é o vencedor!")
             else:
-                print(f"Você perdeu! {wining_color} é o vencedor!")
+                print(f"Você perdeu! {winning_color} é o vencedor!")
 
         rand_distance = random.randint(0, 10)
         turtle.forward(rand_distance)
